@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ProfileHeader extends StatelessWidget {
@@ -25,12 +24,10 @@ class ProfileHeader extends StatelessWidget {
               ),
             ),
             child: Container(
-              decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.3),
-              ),
+              decoration: BoxDecoration(color: Colors.black.withOpacity(0.3)),
             ),
           ),
-          
+
           // Profile Picture
           Positioned(
             bottom: 50,
@@ -42,10 +39,7 @@ class ProfileHeader extends StatelessWidget {
                 height: 120,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 4,
-                  ),
+                  border: Border.all(color: Colors.white, width: 4),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black26,
@@ -62,7 +56,7 @@ class ProfileHeader extends StatelessWidget {
               ),
             ),
           ),
-          
+
           // Name and Title
           Positioned(
             bottom: 0,
@@ -88,7 +82,7 @@ class ProfileHeader extends StatelessWidget {
             ),
           ),
         ],
-     ),
-);
-}
+      ),
+    );
+  }
 }

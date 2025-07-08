@@ -34,7 +34,7 @@ class ProjectsSection extends StatelessWidget {
                 'E-Commerce App',
                 'A complete shopping app with cart, payments, and user management.',
                 ['Flutter', 'Firebase', 'Stripe'],
-                'assets/images/project1.jpg',
+                'assets/images/shop-img.jpg',
               ),
               const SizedBox(height: 16),
               _buildProjectCard(
@@ -42,7 +42,7 @@ class ProjectsSection extends StatelessWidget {
                 'Weather App',
                 'Beautiful weather app with location services and forecasts.',
                 ['Flutter', 'APIs', 'Location'],
-                'assets/images/project2.jpg',
+                'assets/images/weather_img.jpg',
               ),
               const SizedBox(height: 16),
               _buildProjectCard(
@@ -50,7 +50,7 @@ class ProjectsSection extends StatelessWidget {
                 'Task Manager',
                 'Productivity app for managing daily tasks and projects.',
                 ['Flutter', 'SQLite', 'Notifications'],
-                'assets/images/project3.jpg',
+                'assets/images/task_manager.jpg',
               ),
             ],
           ),
@@ -75,17 +75,16 @@ class ProjectsSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: const BorderRadius.vertical(
-              top: Radius.circular(12),
-            ),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
             child: Container(
               height: 120,
               width: double.infinity,
               color: Colors.grey[300],
-              child: const Icon(
-                Icons.image,
-                size: 40,
-                color: Colors.grey,
+              child: Image(
+                image: AssetImage(imagePath),
+                fit: BoxFit.cover,
+
+              //  color: Colors.grey,
               ),
             ),
           ),
@@ -94,10 +93,7 @@ class ProjectsSection extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
+                Text(title, style: Theme.of(context).textTheme.titleMedium),
                 const SizedBox(height: 8),
                 Text(
                   description,
@@ -107,9 +103,10 @@ class ProjectsSection extends StatelessWidget {
                 Wrap(
                   spacing: 6,
                   runSpacing: 6,
-                  children: technologies
-                      .map((tech) => _buildTechChip(context, tech))
-                      .toList(),
+                  children:
+                      technologies
+                          .map((tech) => _buildTechChip(context, tech))
+                          .toList(),
                 ),
               ],
             ),
@@ -132,7 +129,7 @@ class ProjectsSection extends StatelessWidget {
           color: Theme.of(context).colorScheme.secondary,
           fontWeight: FontWeight.w500,
         ),
-     ),
-);
-}
+      ),
+    );
+  }
 }
