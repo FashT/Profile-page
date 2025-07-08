@@ -42,7 +42,7 @@ class ProfileScreen extends StatelessWidget {
             leading: const Icon(Icons.info),
             title: const Text('About'),
             subtitle: const Text(
-              'I am a flutter developer expiring with few years of experience',
+              'I am a flutter developer with few years of experience',
             ),
           ),
           SizedBox(height: size.height * 0.024),
